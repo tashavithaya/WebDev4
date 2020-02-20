@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>Ocean Wise</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,23 +13,66 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo">Ocean Wise</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
+        <li><a class="waves-effect waves-blue btn-flat modal-trigger" href="#modal1">Login</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Navbar Link</a></li>
+        <li><a class="waves-effect waves-blue btn-flat modal-trigger" href="#modal1">Login</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    
+<!-- login form goes here -->
+
+<h1>Login</h1>
+<div class="row">
+  <form class="col s12">
+    
+    <div class="input-field col s6">
+      <input id="last_name" type="text" class="validate">
+      <label for="last_name">Last Name</label>
+    </div>
+    
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" placeholder="Enter Email" required>
+        <label for="email">Email</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" placeholder="Enter Password" required>
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+  </div>
+
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Continue as guest</a>
+    <a href="#!" class="waves-effect waves-light btn modal-trigger">Login</a>
+
+  </div>
+  
+  </div>
+
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <h1 class="header center teal-text text-lighten-2">Protect Our Oceans.</h1>
         <div class="row center">
           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
         </div>
@@ -159,6 +202,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
 
   </body>
 </html>
