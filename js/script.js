@@ -1,7 +1,10 @@
-function openForm() {
-    document.getElementsByClassName("signup").style.display = "flex";
-  }
-  
-  function closeForm() {
-    document.getElementsByClassName("signup").style.display = "none";
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
