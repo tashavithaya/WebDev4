@@ -32,36 +32,36 @@
       <div class="modal-content">
           <h2>Sign up</h2>
         <div class="row">
-            <form class="col s12">
+            <form action="signup.php" method="post" class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
+                    <input id="first_name" name="first_name" type="text" class="validate">
                     <label for="first_name">First Name</label>
                   </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
+                  <input id="last_name" name="last_name" type="text" class="validate">
                   <label for="last_name">Last Name</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
+                  <input id="email" name="email" type="email" class="validate">
                   <label for="email">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
+                  <input id="password" name="password" type="password" class="validate">
                   <label for="password">Password</label>
                 </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="modal-close waves-effect waves-light btn">Sign up</button>
               </div>
             </form>
           </div>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue as Guest</a>
-        <a href="#!" class="modal-close waves-effect waves-light btn">Sign up</a>
-      </div>
+     
     </div>
 
     <div id="modal2" class="modal">
@@ -71,13 +71,8 @@
     
     <h1>Login</h1>
     <div class="row">
-      <form class="col s12">
-        
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-        
+      <form action="validation.php" method="post" class="col s12">
+              
         <div class="row">
           <div class="input-field col s12">
             <input id="email" type="email" class="validate" placeholder="Enter Email" required>
@@ -91,17 +86,16 @@
             <label for="password">Password</label>
           </div>
         </div>
-    
+        
+        <div class="modal-footer">
+          <a href="#!" class="waves-effect waves-light btn modal-trigger">Login</a>
+        </div>
       </form>
     </div>
     
       </div>
     
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Continue as guest</a>
-          <a href="#!" class="waves-effect waves-light btn modal-trigger">Login</a>
-      
-        </div>
+       
       
       </div>
 
@@ -244,3 +238,4 @@
 
   </body>
 </html>
+
