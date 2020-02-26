@@ -2,7 +2,8 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Muli', ;
 }
 
 .cont{
@@ -13,12 +14,11 @@ body {
    background-image: url(./imgs/background.jpg);
    background-size: cover;
    align-items: center;
-   position: relative;
-    
+   position: relative;   
 }
 
 .login-box{
-    height: 550px;
+    height: 480px;
     width: 400px;
     background-color: white;
     border-radius: 10px; 
@@ -36,11 +36,30 @@ form{
     align-items: center;
 }
 
+#or{
+    text-align: center; 
+    position: absolute;
+    top: 64%;
+}
+
+#loginButton{
+    top: 120%;
+    height: 40px;
+    width: 65%;
+    position: absolute;
+}
+
+#signupButton{
+    top: 80%;
+    height: 40px;
+    width: 65%;
+    position: absolute;
+}
+
 .signup-button{
     background-color: lightblue;
     height: 40px;
     width: 160px;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,4 +76,5 @@ form{
     align-items: center;
     position: absolute;
     top: 160%;
+    cursor: pointer;
 }
