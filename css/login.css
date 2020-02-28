@@ -11,14 +11,15 @@ body {
    height: 100vh;
    display: flex;
    justify-content: center;
-   background-image: url(./imgs/background.jpg);
+   background-image: url(../imgs/background.jpg);
    background-size: cover;
    align-items: center;
    position: relative;   
 }
 
+
 .login-box{
-    height: 480px;
+    height: 500px;
     width: 400px;
     background-color: white;
     border-radius: 10px; 
@@ -35,6 +36,10 @@ form{
     width: 100%;
     align-items: center;
 }
+form > p:first-of-type {
+    color: red;
+    font-family: 'Muli', ;
+}
 
 #or{
     text-align: center; 
@@ -50,31 +55,13 @@ form{
 }
 
 #signupButton{
-    top: 80%;
     height: 40px;
     width: 65%;
-    position: absolute;
 }
 
-.signup-button{
-    background-color: lightblue;
-    height: 40px;
-    width: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#signup-button{
     position: absolute;
-    top: 80%;
-}
-.login-button{
-    background-color: lightblue;
+    top: 78%;
     height: 40px;
-    width: 160px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 160%;
-    cursor: pointer;
+    width: 65%;
 }

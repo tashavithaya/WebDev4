@@ -1,7 +1,8 @@
 <?php
 
     session_start();
-    header("location:index.php");
+    header("location:signup-page.php");
+    
 
     $con = mysqli_connect('localhost', 'root', 'root');
 
@@ -10,7 +11,7 @@
     $fname = $_POST['first_name'];
     $lname = $_POST['last_name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
    
 
     $s = " select * from users where email = '$email'";
@@ -19,8 +20,11 @@
 
     $num = mysqli_num_rows($result);
 
+
     if($num == 1){
-        echo "Email Already Taken";
+        $signuperr = "Another user has already taken this email.";
+        echo "sign up failed";
+        header("location:signup-page.php");
     }else{
         $reg = " insert into users(First_Name, Last_name, email, password) values ('$fname','$lname','$email','$password')";
         mysqli_query($con, $reg);

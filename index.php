@@ -1,241 +1,37 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="./css/login.css">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <img src="https://www.digitalhumanlibrary.org/wp-content/uploads/2018/02/OceanWise-Logo-Horizontal-RGB.png" id="logo-container" href="#" class="brand-logo"></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign up</a></li>
-        <li><a class="waves-effect waves-blue btn-flat modal-trigger" href="#modal2">Login</a></li>
-      </ul>
+      <!-- Let browser know website is optimized for mobile -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Log In</title>
+    </head>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a class="waves-effect waves-green btn-flat modal-trigger" href="#modal1">Sign up</a></li>
-        <li><a class="waves-effect waves-blue btn-flat modal-trigger" href="#modal2">Login</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-          <h2>Sign up</h2>
-        <div class="row">
-            <form action="signup.php" method="post" class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                    <input id="first_name" name="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                  </div>
-                <div class="input-field col s6">
-                  <input id="last_name" name="last_name" type="text" class="validate">
-                  <label for="last_name">Last Name</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" name="email" type="email" class="validate">
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" name="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="modal-close waves-effect waves-light btn">Sign up</button>
-              </div>
-            </form>
-          </div>
-      </div>
-     
-    </div>
-
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        
-    <!-- login form goes here -->
-    
-    <h1>Login</h1>
-    <div class="row">
-      <form action="validation.php" method="post" class="col s12">
-              
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" placeholder="Enter Email" required>
-            <label for="email">Email</label>
-          </div>
+    <body>
+        <div class="cont">
+            <div class="login-box">
+                <form action="validation.php" method="post">
+                    <h3 style="padding-bottom: 10px;">Log In</h3>
+                    <input style="width: 65%;" type="text" name="email" placeholder="Email">
+                    <input style="width: 65%;" type="password" id="pword" name="password" placeholder="Password">
+                    <button id="loginButton"  type="submit" class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</button>
+                    <!-- <div class="login-button" type="submit">Log In</div> -->
+                </form>
+                <p id="or">OR</p>
+                <!-- <div class="signup-button" href="">Sign Up </div> -->
+                <a id="signup-button" class="waves-effect waves-light btn modal-trigger" href="signup-page.php">Sign Up</a>
+            </div>
         </div>
-    
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate" placeholder="Enter Password" required>
-            <label for="password">Password</label>
-          </div>
-        </div>
-        
-        <div class="modal-footer">
-          <a href="#!" class="waves-effect waves-light btn modal-trigger">Login</a>
-        </div>
-      </form>
-    </div>
-    
-      </div>
-    
-       
-      
-      </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
 
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Protect Our Oceans.</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Support critical research, direct action and education.</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/script.js"></script>
-
-  </body>
-</html>
-
+  
