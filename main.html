@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,30 +8,26 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    <nav class="black" role="navigation">
-      <div class="nav-wrapper container">
-        <img src="https://ocean.org/wp-content/themes/sage/dist/images/logo-complete_2ca91b48.svg" id="logo-container" class="brand-logo left" style="width: 120px; height: 54px;">
-        <ul class="right hide-on-med-and-down">
-          <li><a href="./home.php">News</a></li>
-          <li><a href="./about.php">About us</a></li>
-        </ul>
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <img src="https://ocean.org/wp-content/themes/sage/dist/images/logo-complete_2ca91b48.svg" id="logo-container" class="brand-logo left" style="width: 120px; height: 54px;">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">News</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
 
-        <ul id="nav-mobile" class="sidenav">
-          <li> <?php
-            if(isset($_SESSION['email'])){
-              echo '<h2 id="heading_username">'.$_SESSION['email'].'</h2>';
-            }
-          ?> </li>
-          <li><a href="./home.php">News</a></li>
-          <li><a href="./about.php">About us</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
-      </div>
-    </nav>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">News</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+    </div>
+  </nav>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -49,7 +44,7 @@
 
       </div>
     </div>
-    <div class="parallax" id="img1"><img src="imgs/background1.jpeg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="imgs/background1.jpeg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -135,7 +130,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax" id="img2"><img src="imgs/background2.jpeg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="imgs/background2.jpeg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -187,7 +182,7 @@
           </div>
       </div>
     </div>
-    <div class="parallax" id="img3"><img src="imgs/background3.jpeg" alt="Unsplashed background img 3" style="filter: brightness(50%);"></div>
+    <div class="parallax"><img src="imgs/background3.jpeg" alt="Unsplashed background img 3" style="filter: brightness(50%);"></div>
   </div>
 
   <footer class="page-footer teal">
@@ -225,7 +220,15 @@
     </div>
   </footer>
 
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/materialize.min.js"></script>
+  <script src="js/lib/moment.js"></script>
+
+  <script src="js/elements.js"></script>
+  <script src="js/networkRequests.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/init.js"></script>
 
   </body>
 </html>

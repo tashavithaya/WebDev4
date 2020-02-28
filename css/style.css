@@ -8,7 +8,7 @@
 
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: white;
 }
 
 .brand-logo {
@@ -23,7 +23,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 600px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -57,4 +57,24 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+.parallax {
+  height: 50em;
+}
+
+#img1 {
+  background-image: url(../imgs/background1.jpeg);
+  background-size: cover;
+}
+
+#img2 {
+  background-image: url(../imgs/background2.jpeg);
+  background-size: cover;
+}
+
+#img3 {
+  background-image: url(../imgs/background3.jpeg);
+  background-size: cover;
+  filter: brightness(50%);
 }
