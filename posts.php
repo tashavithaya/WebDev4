@@ -12,7 +12,7 @@
  
      $img_url = $_POST['image-url'];
      $message = $_POST['message'];
-     $name_id = $_POST['email'];
+     $name_id = "Jacky";
     
  
      $query = " insert into posts(name_id, img_url, message) values ('$name_id','$img_url','$message')";

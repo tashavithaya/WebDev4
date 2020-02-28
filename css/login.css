@@ -37,7 +37,6 @@ form{
     align-items: center;
 }
 form > p:first-of-type {
-    color: red;
     font-family: 'Muli', ;
 }
 

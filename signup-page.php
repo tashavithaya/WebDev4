@@ -1,5 +1,31 @@
 <?php
-  include("signup.php")
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+      $con = mysqli_connect('localhost', 'root', 'root');
+
+      mysqli_select_db($con, 'oceanwise');
+  
+      $fname = $_POST['first_name'];
+      $lname = $_POST['last_name'];
+      $email = $_POST['email'];
+      $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+     
+  
+      $s = " select * from users where email = '$email'";
+  
+      $result = mysqli_query($con, $s);
+  
+      $num = mysqli_num_rows($result);
+  
+  
+      if($num == 1){
+          $signuperr = "Another user has already taken this email.";
+          header("location:signup-page.php");
+      }else{
+          $reg = " insert into users(First_Name, Last_name, email, password) values ('$fname','$lname','$email','$password')";
+          mysqli_query($con, $reg);
+          $signuperr = "Sign Up complete";
+      }
+    }
 ?>
 <!DOCTYPE html>
   <html>
@@ -19,7 +45,7 @@
     <body>
         <div class="cont">
             <div class="login-box">
-                <form action="signup.php" method="post">
+                <form action="signup-page.php" method="post">
                     <h3 style="padding-bottom: 10px;">Sign Up</h3>
                     <?php
                       echo '<p>'. $signuperr .'</p>';

@@ -20,16 +20,26 @@
 <body>
 
   <div class="page-layout">
-    <header class="page-header">
-      <div class="header-content content">
-        <h1 class="page-header__heading">OceanWise</h1>
-        <?php
-          if(isset($_SESSION['email'])){
-            echo '<h2 id="heading_username">'.$_SESSION['email'].'</h2>';
-          }
-        ?> 
-      </div> 
-    </header>
+    <nav class="black" role="navigation">
+      <div class="nav-wrapper container">
+        <img src="https://ocean.org/wp-content/themes/sage/dist/images/logo-complete_2ca91b48.svg" id="logo-container" class="brand-logo left" style="width: 120px; height: 54px;">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="./home.php">News</a></li>
+          <li><a href="./about.php">About us</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li> <?php
+            if(isset($_SESSION['email'])){
+              echo '<h2 id="heading_username">'.$_SESSION['email'].'</h2>';
+            }
+          ?> </li>
+          <li><a href="./home.php">News</a></li>
+          <li><a href="./about.php">About us</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+      </div>
+    </nav>
 
     <main class="main-page">
       <div id="posts-container" class="content posts-container">
@@ -42,7 +52,7 @@
               <div class="col s12 m7">
                 <div class="card">
                   <div class="card-image">
-                    <img src="<?php echo $row['img_url']?>">
+                    <img height="300px" width="400px" src="<?php echo $row['img_url']?>">
                   </div>
                   <div class="card-content">
                     <b>Posted by</b> <br>
